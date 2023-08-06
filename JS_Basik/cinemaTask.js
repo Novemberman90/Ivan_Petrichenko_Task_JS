@@ -31,9 +31,9 @@ let personalMovieDB = {
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        const question1 = prompt("Один из последних просмотренных фильмов ?",'');
+        const question1 = prompt("Один из последних просмотренных фильмов ?",'').trim();
         const question2 = +prompt("На сколько вы его оцените ?", '');
-         personalMovieDB.movies[question1] = question2;
+        // personalMovieDB.movies[question1] = question2;
     // если не нажал "Отмена" в question1 и question2 и не оставил пустую строку и меньше 10 символов тогда ок
         if( question1 != null && question2 != null && question1 != '' && question2 != ''
         && question1.length > 1) {
@@ -41,6 +41,7 @@ function rememberMyFilms() {
             alert ("Done");
         } else { 
             alert('Ещё раз !!!');
+            console.log('error');
              i--; // если не ответил, то мы вернемся на один вопрос назад и так будет каждый раз.
         } 
     }
