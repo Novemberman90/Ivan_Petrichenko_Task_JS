@@ -17,7 +17,7 @@
 
 // Код возьмите из предыдущего домашнего задания
      
-let numberOfFilms = prompt ("Сколько фильмов вы уже посмотрели ?", ''); 
+//let numberOfFilms = prompt ("Сколько фильмов вы уже посмотрели ?", '').trim(); 
 // +promt = если пустая строка то "+" преобразует пустую строку в ноль
 let personalMovieDB = {
     count : numberOfFilms,
@@ -27,24 +27,25 @@ let personalMovieDB = {
     privat : false,
 };
 
-const question1 = prompt("Один из последних просмотренных фильмов ?", '');
-const question2 = +prompt("На сколько вы его оцените ?", '');
+//const question1 = prompt("Один из последних просмотренных фильмов ?", '').trim();
+//const question2 = +prompt("На сколько вы его оцените ?", '');
     
-      personalMovieDB.movies[question1] = question2;
+ //     personalMovieDB.movies[question1] = question2;
      
 
 for (i=0; i < 2; i++) {
-    const question1 = prompt("Один из последних просмотренных фильмов ?",'');
+    const question1 = prompt("Один из последних просмотренных фильмов ?",'').trim();
     const question2 = +prompt("На сколько вы его оцените ?", '');
 personalMovieDB.movies[question1] = question2;
 // если не нажал "Отмена" в question1 и question2 и не оставил пустую строку и меньше 10 символов тогда ок
     if( question1 != null && question2 != null && question1 != '' && question2 != ''
     && question1.length < 10) {
         personalMovieDB.movies[question1] = question2;
-        alert ("Done")
+        alert ("Done");
     } else { 
         alert('Ещё раз !!!')
          i--; // если не ответил, то мы вернемся на один вопрос назад и так будет каждый раз.
+         console.log('error');
     }; 
     
     /*if((question1 == null || question2 == null) || question1.length < 5 || question2.length < 5){
