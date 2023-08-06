@@ -17,7 +17,7 @@
 
 // Код возьмите из предыдущего домашнего задания
      
-//let numberOfFilms = prompt ("Сколько фильмов вы уже посмотрели ?", '').trim(); 
+let numberOfFilms = prompt ("Сколько фильмов вы уже посмотрели ?", ''); 
 // +promt = если пустая строка то "+" преобразует пустую строку в ноль
 let personalMovieDB = {
     count : numberOfFilms,
@@ -27,10 +27,10 @@ let personalMovieDB = {
     privat : false,
 };
 
-//const question1 = prompt("Один из последних просмотренных фильмов ?", '').trim();
-//const question2 = +prompt("На сколько вы его оцените ?", '');
+const question1 = prompt("Один из последних просмотренных фильмов ?", '').trim();
+const question2 = +prompt("На сколько вы его оцените ?", '');
     
- //     personalMovieDB.movies[question1] = question2;
+   personalMovieDB.movies[question1] = question2;
      
 
 for (i=0; i < 2; i++) {
